@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audio Equalizer"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/equalizerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Band 1 (60Hz) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60 Hz"
+                android:textSize="14sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/band1Slider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:rotation="270"
+                android:valueFrom="-15"
+                android:valueTo="15"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/band1Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 dB"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Band 2 (230Hz) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="230 Hz"
+                android:textSize="14sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/band2Slider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:rotation="270"
+                android:valueFrom="-15"
+                android:valueTo="15"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/band2Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 dB"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Band 3 (910Hz) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="910 Hz"
+                android:textSize="14sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/band3Slider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:rotation="270"
+                android:valueFrom="-15"
+                android:valueTo="15"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/band3Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 dB"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Band 4 (3.6kHz) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.6 kHz"
+                android:textSize="14sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/band4Slider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:rotation="270"
+                android:valueFrom="-15"
+                android:valueTo="15"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/band4Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 dB"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Band 5 (14kHz) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14 kHz"
+                android:textSize="14sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/band5Slider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:rotation="270"
+                android:valueFrom="-15"
+                android:valueTo="15"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/band5Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 dB"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/equalizerContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Switch
+        android:id="@+id/equalizerSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Equalizer Enabled"
+        android:checked="true"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/resetButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- This is the new TextView for status information -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Equalizer Status"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/equalizerSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="slider_track_height">6dp</dimen>
+    <dimen name="slider_thumb_radius">12dp</dimen>
+    <dimen name="slider_halo_radius">24dp</dimen>
+</resources>
